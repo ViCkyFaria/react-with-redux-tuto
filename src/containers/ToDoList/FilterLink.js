@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import toDo from '../actions'
-import Link from '../components/Link'
+import { setVisibilityFilter } from '../../actions/toDoList'
+import Link from '../../components/Link'
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onClick: () => {
-      dispatch(toDo.setVisibilityFilter(ownProps.filter))
+      dispatch(setVisibilityFilter(ownProps.filter))
     }
   }
 }

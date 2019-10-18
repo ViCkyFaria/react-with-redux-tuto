@@ -1,8 +1,6 @@
-import toDo from '../actions'
+import { VisibilityFilters } from '../actions/toDoList'
 
-console.log('ToDo',toDo.toDo)
-
-const visibilityFilter = (state = toDo.toDo.VisibilityFilters.SHOW_ALL, action) => {
+const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
   switch (action.type) {
     case 'SET_VISIBILITY_FILTER':
       return action.filter
