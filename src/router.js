@@ -7,17 +7,22 @@ import {
   Link
 } from "react-router-dom";
 
-import { ToDoList } from './containers'
+import {
+  ToDoList ,
+  AsyncApi
+} from './containers'
 
 const Routes = () => (
   <BrowserRouter>
     <nav>
       <div>
-        <Link to="/">ToDoList</Link>
+        <Link to="/">ToDoList</Link>,
+        <Link to="/asyncronous-api">AsyncronousApi</Link>
       </div>
     </nav>
     <Switch>
       <Route exact path="/" component={ToDoList} />
+      <Route exact path="/asyncronous-api" component={AsyncApi} />
     </Switch>
   </BrowserRouter>
 );
