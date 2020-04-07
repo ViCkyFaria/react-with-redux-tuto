@@ -9,20 +9,22 @@ import {
 
 import {
   ToDoList ,
-  AsyncApi
+  AsyncApi,
+  NotFound
 } from './containers'
 
 const Routes = () => (
   <BrowserRouter>
     <nav>
       <div>
-        <Link to="/">ToDoList</Link>,
+        <Link to="/to-do">ToDoList</Link>,
         <Link to="/asyncronous-api">AsyncronousApi</Link>
       </div>
     </nav>
     <Switch>
-      <Route exact path="/" component={ToDoList} />
+      <Route exact path="/to-do" component={ToDoList} />
       <Route exact path="/asyncronous-api" component={AsyncApi} />
+      <Route path="*" component={NotFound}/>
     </Switch>
   </BrowserRouter>
 );
