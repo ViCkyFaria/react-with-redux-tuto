@@ -1,16 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './assets/theme/index.css';
 import Routes from './router';
+
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>A test with redux</p>
-        <Routes />
-      </header>
+      <Header />
+      <Routes />
     </div>
   );
 }
